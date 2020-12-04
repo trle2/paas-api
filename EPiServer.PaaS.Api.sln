@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.64
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EPiServer.PaaS.Api", "src\EPiServer.PaaS.Api\EPiServer.PaaS.Api.csproj", "{95CB07F5-B517-42C6-ABF5-4788E1261BBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{92796C95-A07D-421E-8610-D8CD84DF79F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleWebApp", "tests\SampleWebApp\SampleWebApp.csproj", "{1BFD7672-A413-4C3C-939E-419CD12CD3DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleJobsApp", "tests\SampleJobsApp\SampleJobsApp.csproj", "{922A5465-9722-4A11-9E23-2F32F6267208}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "EPiServer.PaaS.CLI", "src\EPiServer.PaaS.CLI\EPiServer.PaaS.CLI.pyproj", "{1BA46DAC-D6E3-41E8-A08D-9098B3F8A51E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95CB07F5-B517-42C6-ABF5-4788E1261BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CB07F5-B517-42C6-ABF5-4788E1261BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CB07F5-B517-42C6-ABF5-4788E1261BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CB07F5-B517-42C6-ABF5-4788E1261BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFD7672-A413-4C3C-939E-419CD12CD3DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFD7672-A413-4C3C-939E-419CD12CD3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFD7672-A413-4C3C-939E-419CD12CD3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFD7672-A413-4C3C-939E-419CD12CD3DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922A5465-9722-4A11-9E23-2F32F6267208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922A5465-9722-4A11-9E23-2F32F6267208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922A5465-9722-4A11-9E23-2F32F6267208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922A5465-9722-4A11-9E23-2F32F6267208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA46DAC-D6E3-41E8-A08D-9098B3F8A51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA46DAC-D6E3-41E8-A08D-9098B3F8A51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BFD7672-A413-4C3C-939E-419CD12CD3DC} = {92796C95-A07D-421E-8610-D8CD84DF79F2}
+		{922A5465-9722-4A11-9E23-2F32F6267208} = {92796C95-A07D-421E-8610-D8CD84DF79F2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46F01073-FAA3-4012-A351-C1B35A3842D1}
+	EndGlobalSection
+EndGlobal

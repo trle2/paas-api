@@ -1,0 +1,19 @@
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /src
+COPY ["{{PROJECT_FILE_WITH_PATH}}", "{{PROJECT_NAME}}/"]
+RUN dotnet restore "{{PROJECT_FILE_WITH_PATH}}"
+COPY . .
+RUN dotnet build "{{PROJECT_FILE_WITH_PATH}}" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "{{PROJECT_FILE_WITH_PATH}}" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "{{PROJECT_NAME}}.dll"]
