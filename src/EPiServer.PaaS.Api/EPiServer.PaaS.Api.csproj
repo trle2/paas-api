@@ -13,10 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Content\DockerfileTemplateForFunctions">
+    <None Update="Templates\DockerfileTemplateForFunctions">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Content\DockerfileTemplateForWebApp">
+    <None Update="Templates\DockerfileTemplateForWebApp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -18,9 +18,18 @@ namespace EPiServer.PaaS.Api
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+            .ConfigureAppConfiguration((context, config) =>
+            {
+                var builtConfig = config.Build();
+
+                var environmentName = context.HostingEnvironment.EnvironmentName;
+
+                config.AddJsonFile(
+                "appsettings.{environmentName}.json", optional: false, reloadOnChange: false);
+            })
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
     }
 }
